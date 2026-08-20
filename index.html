@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Небольшой квест ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--
+    КАК ДОБАВЛЯТЬ ФОТО:
+    1. Положи фотографию в папку assets.
+    2. Назови её photo_7.jpg, photo_8.jpg и т.д.
+    3. В index.html найди нужный вопрос и замени src="assets/photo_7.jpg".
+    Если файл отсутствует, блок фотографии автоматически скрывается.
+  -->
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+
+  <main class="app">
+    <section class="screen active" id="start">
+      <div class="eyebrow">для Ангелины❤️ · 2026</div>
+      <div class="heart">♡</div>
+      <h1>У меня для тебя<br><em>маленький квест</em></h1>
+      <p class="lead">Я собрал несколько вопросов о нас.<br>Отвечай честно — и в конце тебя ждёт кое-что важное.</p>
+      <button class="primary" data-go="q1">Начать <span>→</span></button>
+      
+    </section>
+
+    <section class="screen" id="q1">
+      <div class="progress"><span style="width: 11%"></span></div>
+      <div class="counter">01 / 09</div>
+      <h2>Где ты была, когда мы впервые списались?</h2>
+      <p class="hint">В каком городе?</p>
+      <div class="answers">
+        <button data-correct="false">Брест</button>
+        <button data-correct="true">Пинск</button>
+        <button data-correct="false">Гродно</button>
+        <button data-correct="false">Минск</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q2">
+      <div class="progress"><span style="width: 22%"></span></div>
+      <div class="counter">02 / 09</div>
+      <h2>На чём мы первый раз катались?</h2>
+      <p class="hint">Подсказка: та самая первая машина 😉</p>
+      <div class="answers">
+        <button data-correct="false">Toyota</button>
+        <button data-correct="true">Ford EcoSport Titanium 1.0 EcoBoost 2019</button>
+        <button data-correct="false">BMW</button>
+        <button data-correct="false">Мерседес</button>
+      </div>
+      <div class="memory-photo" data-photo="photo_2.jpg">
+        <img src="assets/photo_2.jpg" alt="Наша маленькая история" onerror="this.closest('.memory-photo').classList.add('empty')">
+        <div class="photo-caption">Наша маленькая история</div>
+        <button class="continue-photo" type="button">Дальше →</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q3">
+      <div class="progress"><span style="width: 33%"></span></div>
+      <div class="counter">03 / 09</div>
+      <h2>Какие цветы я подарил тебе первыми?</h2>
+      <p class="hint">Нежные и весенние 🌷</p>
+      <div class="answers">
+        <button data-correct="true">Тюльпаны</button>
+        <button data-correct="false">Розы</button>
+        <button data-correct="false">Ромашки</button>
+        <button data-correct="false">Пионы</button>
+      </div>
+      <div class="memory-photo" data-photo="photo_3.jpg">
+        <img src="assets/photo_3.jpg" alt="С того самого момента" onerror="this.closest('.memory-photo').classList.add('empty')">
+        <div class="photo-caption">С того самого момента</div>
+        <button class="continue-photo" type="button">Дальше →</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q4">
+      <div class="progress"><span style="width: 44%"></span></div>
+      <div class="counter">04 / 09</div>
+      <h2>Куда мы ездили при знакомстве с мамой?</h2>
+      <p class="hint">Небольшая поездка, которую сложно забыть.</p>
+      <div class="answers">
+        <button data-correct="false">Логойск</button>
+        <button data-correct="false">Брест</button>
+        <button data-correct="true">Брашевичи</button>
+        <button data-correct="false">Пинск</button>
+      </div>
+      <div class="memory-photo" data-photo="photo_4.jpg">
+        <img src="assets/photo_4.jpg" alt="Ещё одно наше воспоминание" onerror="this.closest('.memory-photo').classList.add('empty')">
+        <div class="photo-caption">Ещё одно наше воспоминание</div>
+        <button class="continue-photo" type="button">Дальше →</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q5">
+      <div class="progress"><span style="width: 55%"></span></div>
+      <div class="counter">05 / 09</div>
+      <h2>Куда была наша первая дальняя поездка на машине?</h2>
+      <p class="hint">Город, который стал первым большим пунктом назначения.</p>
+      <div class="answers">
+        <button data-correct="true">Брест</button>
+        <button data-correct="false">Гродно</button>
+        <button data-correct="false">Витебск</button>
+        <button data-correct="false">Могилёв</button>
+      </div>
+      <div class="memory-photo" data-photo="photo_5.jpg">
+        <img src="assets/photo_5.jpg" alt="То, что хочется сохранить" onerror="this.closest('.memory-photo').classList.add('empty')">
+        <div class="photo-caption">То, что хочется сохранить</div>
+        <button class="continue-photo" type="button">Дальше →</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q6">
+      <div class="progress"><span style="width: 66%"></span></div>
+      <div class="counter">06 / 09</div>
+      <h2>Какой исполнитель помог нам сблизиться?</h2>
+      <p class="hint">У этой музыки теперь есть своя история.</p>
+      <div class="answers">
+        <button data-correct="false">Баста</button>
+        <button data-correct="false">Мияги</button>
+        <button data-correct="true">Тимур Муцураев</button>
+        <button data-correct="false">Макс Корж</button>
+      </div>
+      <div class="memory-photo" data-photo="photo_6.jpg">
+        <img src="assets/photo_6.jpg" alt="Наша история продолжается" onerror="this.closest('.memory-photo').classList.add('empty')">
+        <div class="photo-caption">Наша история продолжается</div>
+        <button class="continue-photo" type="button">Дальше →</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q7">
+      <div class="progress"><span style="width: 77%"></span></div>
+      <div class="counter">07 / 09</div>
+      <h2>Твоё настоящее имя?</h2>
+      <p class="hint">Ответ ты, конечно, знаешь ❤️</p>
+      <div class="answers">
+        <button data-correct="false">Александр</button>
+        <button data-correct="true">Алеша</button>
+        <button data-correct="false">Володька</button>
+        <button data-correct="false">Лёня</button>
+      </div>
+      <div class="memory-photo" data-photo="photo_7.jpg">
+        <img src="assets/photo_7.jpg" alt="Это место можно заполнить твоей фотографией" onerror="this.closest('.memory-photo').classList.add('empty')">
+        <div class="photo-caption">Это место можно заполнить твоей фотографией</div>
+        <button class="continue-photo" type="button">Дальше →</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen" id="q8">
+      <div class="progress"><span style="width: 88%"></span></div>
+      <div class="counter">08 / 09</div>
+      <h2>Какая машина нас связала?</h2>
+      <p class="hint">Вот здесь начинается самое интересное.</p>
+      <div class="answers">
+        <button data-correct="false">Фордик</button>
+        <button data-correct="false">BMW</button>
+        <button data-correct="true">Туарег</button>
+        <button data-correct="false">Вольво</button>
+      </div>
+      <div class="memory-photo" data-photo="photo_8.jpg">
+        <img src="assets/photo_8.jpg" alt="Ещё одно воспоминание" onerror="this.closest('.memory-photo').classList.add('empty')">
+        <div class="photo-caption">Ещё одно воспоминание</div>
+        <button class="continue-photo" type="button">Дальше →</button>
+      </div>
+      <div class="feedback"></div>
+    </section>
+
+    <section class="screen final-question" id="q9">
+      <div class="progress"><span style="width: 100%"></span></div>
+      <div class="counter">09 / 09 · главный вопрос</div>
+      <div class="big-heart">♥</div>
+      <h2>А теперь самое главное…</h2>
+      <p class="lead">Если именно эта машина нас связала,<br>то куда мы можем отправиться на ней вместе?</p>
+      <button class="primary reveal" data-go="final">Узнать ответ <span>→</span></button>
+    </section>
+
+    <section class="screen finale" id="final">
+      <div class="final-glow"></div>
+      <div class="final-content">
+        <div class="eyebrow">наш следующий маленький побег</div>
+
+        <div class="final-photo-wrap">
+          <img src="./assets/touareg.jpg"
+               alt="Наша машина"
+               class="final-car"
+               id="touaregPhoto">
+          <div class="car-placeholder" id="carPlaceholder">
+            <span>🚙</span>
+            <small>ФОТО ТУАРЕГА НЕ НАЙДЕНО</small>
+          </div>
+        </div>
+
+        <p class="final-intro">Именно эта машина</p>
+        <h1>однажды<br><em>нас связала.</em></h1>
+        <div class="final-divider">♡</div>
+        <p class="final-trip">А теперь именно на ней<br>мы отправимся вместе</p>
+        <div class="destination">в Гродно</div>
+
+        <div class="route">
+          <span>МЫ</span><i></i><span>ГРОДНО</span>
+        </div>
+
+        <div class="trip-card final-card">
+          <div><span>Когда</span><strong>любые выходные<br>в октябре / ноябре</strong></div>
+          <div><span>Кто</span><strong>только ты и я ❤️</strong></div>
+          <div><span>Что взять</span><strong>хорошее настроение<br>и немного вещей</strong></div>
+        </div>
+
+        <p class="love">Так что собирай чемодан.<br>У нас намечается поездка.</p>
+        <p class="signature">Твой котик ❤️</p>
+        <button class="ghost" id="restart">Пройти квест ещё раз</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
